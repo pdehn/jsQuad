@@ -15,8 +15,8 @@ window.onload = function() {
 	var mx = 300;
 	var my = 300;
 	cv.onmousemove = function(e) {
-		mx = e.clientX - cv.offsetLeft;
-		my = e.clientY - cv.offsetTop;
+		mx = e.clientX - cv.offsetLeft + document.body.scrollLeft;
+		my = e.clientY - cv.offsetTop + document.body.scrollTop;
 	};
 	
 	var ctx = cv.getContext('2d');
